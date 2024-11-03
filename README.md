@@ -1,2 +1,2 @@
-###Progress on simple app :
+### Progress on simple app :
 1.Simple Weather Apps 🌤️
