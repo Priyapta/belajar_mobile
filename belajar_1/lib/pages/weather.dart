@@ -2,6 +2,7 @@ import 'package:belajar_1/models/weather_model.dart';
 import 'package:belajar_1/service/weather_service.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'dart:js'; 
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({super.key});
