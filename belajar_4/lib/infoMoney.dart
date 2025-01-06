@@ -13,7 +13,7 @@ class _InfoMoneyState extends State<InfoMoney> {
   int? index;
   late bool others;
 
-  @overrideJ
+  @override
   void initState() {
     super.initState();
     others = !selectedIndex;
