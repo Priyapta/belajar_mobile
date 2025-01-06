@@ -1,3 +1,4 @@
+import 'package:belajar_4/mainPage.dart';
 import 'package:belajar_4/myHomepage.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const Myhomepage(),
+      color: Colors.blue,
+      home: const MainPage(),
     );
   }
 }

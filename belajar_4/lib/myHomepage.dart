@@ -1,19 +1,44 @@
 import 'package:belajar_4/detailOutcome.dart';
 import 'package:belajar_4/infoMoney.dart';
 import 'package:belajar_4/left_drawer.dart';
+import 'package:belajar_4/menuScreen.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
-class Myhomepage extends StatelessWidget {
+class Myhomepage extends StatefulWidget {
   const Myhomepage({super.key});
 
   @override
+  State<Myhomepage> createState() => _MyhomepageState();
+}
+
+class _MyhomepageState extends State<Myhomepage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CurvedNavigationBar(
+        items: [
+          Icon(Icons.home),
+          Icon(Icons.analytics),
+          Icon(Icons.add),
+          Icon(Icons.rocket),
+        ],
+        color: Colors.green.shade100,
+        backgroundColor: Colors.grey.shade100,
+      ),
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: Center(child: Text("Hello")),
+        title: Center(
+          child: Text("Hello"),
+        ),
+        leading: IconButton(
+            onPressed: () {
+              ZoomDrawer.of(context)!.toggle();
+            },
+            icon: Icon(Icons.menu)),
       ),
-      drawer: leftDrawer(),
+      // drawer: leftDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
@@ -24,7 +49,10 @@ class Myhomepage extends StatelessWidget {
               InfoMoney(),
               Row(
                 children: [
-                  Text("Recent Expanses"),
+                  Text(
+                    "Recent Expanses",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
               Container(
