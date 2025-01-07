@@ -17,8 +17,8 @@ class _MainPageState extends State<MainPage> {
       // style: DrawerStyle.style1,
       mainScreen: const Myhomepage(),
       menuScreen: const menuScreen(),
-      menuBackgroundColor: Colors.grey.shade100,
-      showShadow: true,
+      menuBackgroundColor: Colors.green.shade400,
+      // showShadow: true,
 
       isRtl: false,
     );
